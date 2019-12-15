@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,12 @@
 		840FC5D823A5E2070043784D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840FC5D623A5E2070043784D /* LaunchScreen.storyboard */; };
 		840FC5E323A5E2070043784D /* SwivelGroupTestProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC5E223A5E2070043784D /* SwivelGroupTestProjectTests.swift */; };
 		840FC5F923A5FF1D0043784D /* ConstantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC5F823A5FF1D0043784D /* ConstantManager.swift */; };
+		840FC5FD23A6044F0043784D /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC5FC23A6044F0043784D /* News.swift */; };
+		840FC5FF23A60A890043784D /* APIConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC5FE23A60A890043784D /* APIConfigurationManager.swift */; };
+		840FC60123A60AB60043784D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC60023A60AB60043784D /* APIService.swift */; };
+		840FC60323A615680043784D /* NewsServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC60223A615680043784D /* NewsServiceClient.swift */; };
+		840FC60523A65DAC0043784D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC60423A65DAC0043784D /* Article.swift */; };
+		840FC60723A66C8D0043784D /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC60623A66C8D0043784D /* NewsListViewController.swift */; };
 		9C8C136422B7D311E31657FB /* Pods_SwivelGroupTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5626CFE81A3BB03F6D99F1 /* Pods_SwivelGroupTestProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +53,12 @@
 		840FC5F623A5FE160043784D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		840FC5F723A5FE230043784D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		840FC5F823A5FF1D0043784D /* ConstantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantManager.swift; sourceTree = "<group>"; };
+		840FC5FC23A6044F0043784D /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		840FC5FE23A60A890043784D /* APIConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigurationManager.swift; sourceTree = "<group>"; };
+		840FC60023A60AB60043784D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		840FC60223A615680043784D /* NewsServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceClient.swift; sourceTree = "<group>"; };
+		840FC60423A65DAC0043784D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		840FC60623A66C8D0043784D /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		89D56F36DE0EE669C30667A0 /* Pods-SwivelGroupTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProject.release.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		D30A37656B3F39EAB8B3CECF /* Pods_SwivelGroupTestProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwivelGroupTestProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0F1875CF151B2E774D4517 /* Pods-SwivelGroupTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProject.debug.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,7 +93,6 @@
 				E94DE9EBD01DA0C4B2597102 /* Pods-SwivelGroupTestProjectTests.debug.xcconfig */,
 				42C7DFA8EBC777448E89F7DB /* Pods-SwivelGroupTestProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -139,6 +150,8 @@
 		840FC5ED23A5FB830043784D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				840FC5FC23A6044F0043784D /* News.swift */,
+				840FC60423A65DAC0043784D /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +166,7 @@
 		840FC5EF23A5FB920043784D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				840FC60623A66C8D0043784D /* NewsListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -160,6 +174,8 @@
 		840FC5F023A5FB990043784D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				840FC60023A60AB60043784D /* APIService.swift */,
+				840FC60223A615680043784D /* NewsServiceClient.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -168,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				840FC5F823A5FF1D0043784D /* ConstantManager.swift */,
+				840FC5FE23A60A890043784D /* APIConfigurationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -374,9 +391,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				840FC5D023A5E2050043784D /* ViewController.swift in Sources */,
+				840FC60123A60AB60043784D /* APIService.swift in Sources */,
+				840FC60523A65DAC0043784D /* Article.swift in Sources */,
 				840FC5F923A5FF1D0043784D /* ConstantManager.swift in Sources */,
 				840FC5CC23A5E2050043784D /* AppDelegate.swift in Sources */,
+				840FC60723A66C8D0043784D /* NewsListViewController.swift in Sources */,
+				840FC5FD23A6044F0043784D /* News.swift in Sources */,
 				840FC5CE23A5E2050043784D /* SceneDelegate.swift in Sources */,
+				840FC5FF23A60A890043784D /* APIConfigurationManager.swift in Sources */,
+				840FC60323A615680043784D /* NewsServiceClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,5 +9,17 @@
 import Foundation
 
 struct ServerParams {
-    static let baseUrl = "Bundle.main.infoDictionary?["API_SERVER_URL"] as? String"
+    static let baseUrl = "https://newsapi.org"
+}
+
+enum ContentType: String {
+    case json = "application/json"
+}
+
+enum HTTPHeaderField: String {
+    case authentication = "Authorization"
+    case contentType = "Content-Type"
+    case acceptType = "Accept"
+    case acceptEncoding = "Accept-Encoding"
+
 }

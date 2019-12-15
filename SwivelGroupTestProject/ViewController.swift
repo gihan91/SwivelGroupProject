@@ -9,10 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var arrayNews = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        NewsServiceClient.getNewsList { (result) in
+            switch result {
+
+            case .success(let news):
+                var list = news.articles
+                for alldata in list! {
+                    print(alldata.title)
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 
