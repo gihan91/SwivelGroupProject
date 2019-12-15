@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AF2C3B7BE93F04C9D2237B2 /* Pods_SwivelGroupTestProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30A37656B3F39EAB8B3CECF /* Pods_SwivelGroupTestProjectTests.framework */; };
 		840FC5CC23A5E2050043784D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC5CB23A5E2050043784D /* AppDelegate.swift */; };
 		840FC5CE23A5E2050043784D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC5CD23A5E2050043784D /* SceneDelegate.swift */; };
 		840FC5D023A5E2050043784D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC5CF23A5E2050043784D /* ViewController.swift */; };
@@ -14,6 +15,8 @@
 		840FC5D523A5E2070043784D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840FC5D423A5E2070043784D /* Assets.xcassets */; };
 		840FC5D823A5E2070043784D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840FC5D623A5E2070043784D /* LaunchScreen.storyboard */; };
 		840FC5E323A5E2070043784D /* SwivelGroupTestProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC5E223A5E2070043784D /* SwivelGroupTestProjectTests.swift */; };
+		840FC5F923A5FF1D0043784D /* ConstantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC5F823A5FF1D0043784D /* ConstantManager.swift */; };
+		9C8C136422B7D311E31657FB /* Pods_SwivelGroupTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5626CFE81A3BB03F6D99F1 /* Pods_SwivelGroupTestProject.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E5626CFE81A3BB03F6D99F1 /* Pods_SwivelGroupTestProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwivelGroupTestProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C7DFA8EBC777448E89F7DB /* Pods-SwivelGroupTestProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProjectTests.release.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProjectTests/Pods-SwivelGroupTestProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		840FC5C823A5E2050043784D /* SwivelGroupTestProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwivelGroupTestProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840FC5CB23A5E2050043784D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		840FC5CD23A5E2050043784D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,14 @@
 		840FC5DE23A5E2070043784D /* SwivelGroupTestProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwivelGroupTestProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		840FC5E223A5E2070043784D /* SwivelGroupTestProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwivelGroupTestProjectTests.swift; sourceTree = "<group>"; };
 		840FC5E423A5E2070043784D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840FC5F523A5FE070043784D /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		840FC5F623A5FE160043784D /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		840FC5F723A5FE230043784D /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		840FC5F823A5FF1D0043784D /* ConstantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantManager.swift; sourceTree = "<group>"; };
+		89D56F36DE0EE669C30667A0 /* Pods-SwivelGroupTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProject.release.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject.release.xcconfig"; sourceTree = "<group>"; };
+		D30A37656B3F39EAB8B3CECF /* Pods_SwivelGroupTestProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwivelGroupTestProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD0F1875CF151B2E774D4517 /* Pods-SwivelGroupTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProject.debug.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject.debug.xcconfig"; sourceTree = "<group>"; };
+		E94DE9EBD01DA0C4B2597102 /* Pods-SwivelGroupTestProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProjectTests/Pods-SwivelGroupTestProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8C136422B7D311E31657FB /* Pods_SwivelGroupTestProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +66,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AF2C3B7BE93F04C9D2237B2 /* Pods_SwivelGroupTestProjectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		529A8A15CE632D0E73B48270 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD0F1875CF151B2E774D4517 /* Pods-SwivelGroupTestProject.debug.xcconfig */,
+				89D56F36DE0EE669C30667A0 /* Pods-SwivelGroupTestProject.release.xcconfig */,
+				E94DE9EBD01DA0C4B2597102 /* Pods-SwivelGroupTestProjectTests.debug.xcconfig */,
+				42C7DFA8EBC777448E89F7DB /* Pods-SwivelGroupTestProjectTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		840FC5BF23A5E2050043784D = {
 			isa = PBXGroup;
 			children = (
 				840FC5CA23A5E2050043784D /* SwivelGroupTestProject */,
 				840FC5E123A5E2070043784D /* SwivelGroupTestProjectTests */,
 				840FC5C923A5E2050043784D /* Products */,
+				529A8A15CE632D0E73B48270 /* Pods */,
+				C15BEE84D5AFC581D355B651 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +108,14 @@
 		840FC5CA23A5E2050043784D /* SwivelGroupTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				840FC5F423A5FC830043784D /* Environments */,
+				840FC5F323A5FBE20043784D /* Extentions */,
+				840FC5F223A5FBAC0043784D /* Utils */,
+				840FC5F123A5FBA00043784D /* Managers */,
+				840FC5F023A5FB990043784D /* Services */,
+				840FC5EF23A5FB920043784D /* Controller */,
+				840FC5EE23A5FB8C0043784D /* View */,
+				840FC5ED23A5FB830043784D /* Model */,
 				840FC5CB23A5E2050043784D /* AppDelegate.swift */,
 				840FC5CD23A5E2050043784D /* SceneDelegate.swift */,
 				840FC5CF23A5E2050043784D /* ViewController.swift */,
@@ -99,6 +136,75 @@
 			path = SwivelGroupTestProjectTests;
 			sourceTree = "<group>";
 		};
+		840FC5ED23A5FB830043784D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		840FC5EE23A5FB8C0043784D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		840FC5EF23A5FB920043784D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		840FC5F023A5FB990043784D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		840FC5F123A5FBA00043784D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				840FC5F823A5FF1D0043784D /* ConstantManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		840FC5F223A5FBAC0043784D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		840FC5F323A5FBE20043784D /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		840FC5F423A5FC830043784D /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				840FC5F523A5FE070043784D /* Development.xcconfig */,
+				840FC5F623A5FE160043784D /* Release.xcconfig */,
+				840FC5F723A5FE230043784D /* Debug.xcconfig */,
+			);
+			path = Environments;
+			sourceTree = "<group>";
+		};
+		C15BEE84D5AFC581D355B651 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E5626CFE81A3BB03F6D99F1 /* Pods_SwivelGroupTestProject.framework */,
+				D30A37656B3F39EAB8B3CECF /* Pods_SwivelGroupTestProjectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840FC5E723A5E2070043784D /* Build configuration list for PBXNativeTarget "SwivelGroupTestProject" */;
 			buildPhases = (
+				C87FB67A9F268CB54C34B80D /* [CP] Check Pods Manifest.lock */,
 				840FC5C423A5E2050043784D /* Sources */,
 				840FC5C523A5E2050043784D /* Frameworks */,
 				840FC5C623A5E2050043784D /* Resources */,
+				FCB8E8705D0F7E9B11FED01D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +231,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840FC5EA23A5E2070043784D /* Build configuration list for PBXNativeTarget "SwivelGroupTestProjectTests" */;
 			buildPhases = (
+				0EC717C1958B8AAD7CE730D1 /* [CP] Check Pods Manifest.lock */,
 				840FC5DA23A5E2070043784D /* Sources */,
 				840FC5DB23A5E2070043784D /* Frameworks */,
 				840FC5DC23A5E2070043784D /* Resources */,
@@ -195,12 +304,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EC717C1958B8AAD7CE730D1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwivelGroupTestProjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C87FB67A9F268CB54C34B80D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwivelGroupTestProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCB8E8705D0F7E9B11FED01D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		840FC5C423A5E2050043784D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				840FC5D023A5E2050043784D /* ViewController.swift in Sources */,
+				840FC5F923A5FF1D0043784D /* ConstantManager.swift in Sources */,
 				840FC5CC23A5E2050043784D /* AppDelegate.swift in Sources */,
 				840FC5CE23A5E2050043784D /* SceneDelegate.swift in Sources */,
 			);
@@ -360,10 +534,11 @@
 		};
 		840FC5E823A5E2070043784D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD0F1875CF151B2E774D4517 /* Pods-SwivelGroupTestProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CF4Q2LXK5N;
+				DEVELOPMENT_TEAM = XCPM2R6PDV;
 				INFOPLIST_FILE = SwivelGroupTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,10 +553,11 @@
 		};
 		840FC5E923A5E2070043784D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89D56F36DE0EE669C30667A0 /* Pods-SwivelGroupTestProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CF4Q2LXK5N;
+				DEVELOPMENT_TEAM = XCPM2R6PDV;
 				INFOPLIST_FILE = SwivelGroupTestProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,6 +572,7 @@
 		};
 		840FC5EB23A5E2070043784D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E94DE9EBD01DA0C4B2597102 /* Pods-SwivelGroupTestProjectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +595,7 @@
 		};
 		840FC5EC23A5E2070043784D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42C7DFA8EBC777448E89F7DB /* Pods-SwivelGroupTestProjectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
