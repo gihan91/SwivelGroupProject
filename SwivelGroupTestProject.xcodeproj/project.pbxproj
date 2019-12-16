@@ -22,6 +22,18 @@
 		840FC60323A615680043784D /* NewsServiceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC60223A615680043784D /* NewsServiceClient.swift */; };
 		840FC60523A65DAC0043784D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC60423A65DAC0043784D /* Article.swift */; };
 		840FC60723A66C8D0043784D /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC60623A66C8D0043784D /* NewsListViewController.swift */; };
+		840FC60923A6710E0043784D /* NewsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FC60823A6710E0043784D /* NewsListTableViewCell.swift */; };
+		8445C4D423A7D7D500CD6EF9 /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4D323A7D7D500CD6EF9 /* UIImageExtention.swift */; };
+		8445C4D623A7D90E00CD6EF9 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4D523A7D90E00CD6EF9 /* NewsDetailViewController.swift */; };
+		8445C4D823A7F10600CD6EF9 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4D723A7F10600CD6EF9 /* TabViewController.swift */; };
+		8445C4DA23A7F23800CD6EF9 /* ShowHeadLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4D923A7F23800CD6EF9 /* ShowHeadLineViewController.swift */; };
+		8445C4DC23A7F50B00CD6EF9 /* HeadLineListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4DB23A7F50B00CD6EF9 /* HeadLineListTableViewCell.swift */; };
+		8445C4DE23A7FC9D00CD6EF9 /* CustomeHeadLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4DD23A7FC9D00CD6EF9 /* CustomeHeadLineViewController.swift */; };
+		8445C4E023A7FF5700CD6EF9 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4DF23A7FF5700CD6EF9 /* DateUtil.swift */; };
+		8445C4E223A8004500CD6EF9 /* NewsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4E123A8004500CD6EF9 /* NewsManager.swift */; };
+		8445C4E523A80DA200CD6EF9 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4E423A80DA200CD6EF9 /* UserDAO.swift */; };
+		8445C4E723A80EF300CD6EF9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4E623A80EF300CD6EF9 /* ProfileViewController.swift */; };
+		8445C4E923A8123300CD6EF9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4E823A8123300CD6EF9 /* WelcomeViewController.swift */; };
 		9C8C136422B7D311E31657FB /* Pods_SwivelGroupTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5626CFE81A3BB03F6D99F1 /* Pods_SwivelGroupTestProject.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +71,18 @@
 		840FC60223A615680043784D /* NewsServiceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceClient.swift; sourceTree = "<group>"; };
 		840FC60423A65DAC0043784D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		840FC60623A66C8D0043784D /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
+		840FC60823A6710E0043784D /* NewsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListTableViewCell.swift; sourceTree = "<group>"; };
+		8445C4D323A7D7D500CD6EF9 /* UIImageExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtention.swift; sourceTree = "<group>"; };
+		8445C4D523A7D90E00CD6EF9 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		8445C4D723A7F10600CD6EF9 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		8445C4D923A7F23800CD6EF9 /* ShowHeadLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowHeadLineViewController.swift; sourceTree = "<group>"; };
+		8445C4DB23A7F50B00CD6EF9 /* HeadLineListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadLineListTableViewCell.swift; sourceTree = "<group>"; };
+		8445C4DD23A7FC9D00CD6EF9 /* CustomeHeadLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeHeadLineViewController.swift; sourceTree = "<group>"; };
+		8445C4DF23A7FF5700CD6EF9 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		8445C4E123A8004500CD6EF9 /* NewsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsManager.swift; sourceTree = "<group>"; };
+		8445C4E423A80DA200CD6EF9 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		8445C4E623A80EF300CD6EF9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8445C4E823A8123300CD6EF9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		89D56F36DE0EE669C30667A0 /* Pods-SwivelGroupTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProject.release.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		D30A37656B3F39EAB8B3CECF /* Pods_SwivelGroupTestProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwivelGroupTestProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0F1875CF151B2E774D4517 /* Pods-SwivelGroupTestProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProject.debug.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +174,7 @@
 		840FC5ED23A5FB830043784D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8445C4E323A80D8800CD6EF9 /* DAO */,
 				840FC5FC23A6044F0043784D /* News.swift */,
 				840FC60423A65DAC0043784D /* Article.swift */,
 			);
@@ -167,6 +192,14 @@
 			isa = PBXGroup;
 			children = (
 				840FC60623A66C8D0043784D /* NewsListViewController.swift */,
+				840FC60823A6710E0043784D /* NewsListTableViewCell.swift */,
+				8445C4D523A7D90E00CD6EF9 /* NewsDetailViewController.swift */,
+				8445C4D723A7F10600CD6EF9 /* TabViewController.swift */,
+				8445C4D923A7F23800CD6EF9 /* ShowHeadLineViewController.swift */,
+				8445C4DB23A7F50B00CD6EF9 /* HeadLineListTableViewCell.swift */,
+				8445C4DD23A7FC9D00CD6EF9 /* CustomeHeadLineViewController.swift */,
+				8445C4E623A80EF300CD6EF9 /* ProfileViewController.swift */,
+				8445C4E823A8123300CD6EF9 /* WelcomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -185,6 +218,7 @@
 			children = (
 				840FC5F823A5FF1D0043784D /* ConstantManager.swift */,
 				840FC5FE23A60A890043784D /* APIConfigurationManager.swift */,
+				8445C4E123A8004500CD6EF9 /* NewsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -192,6 +226,7 @@
 		840FC5F223A5FBAC0043784D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8445C4DF23A7FF5700CD6EF9 /* DateUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -199,6 +234,7 @@
 		840FC5F323A5FBE20043784D /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				8445C4D323A7D7D500CD6EF9 /* UIImageExtention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -211,6 +247,14 @@
 				840FC5F723A5FE230043784D /* Debug.xcconfig */,
 			);
 			path = Environments;
+			sourceTree = "<group>";
+		};
+		8445C4E323A80D8800CD6EF9 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				8445C4E423A80DA200CD6EF9 /* UserDAO.swift */,
+			);
+			path = DAO;
 			sourceTree = "<group>";
 		};
 		C15BEE84D5AFC581D355B651 /* Frameworks */ = {
@@ -393,13 +437,25 @@
 				840FC5D023A5E2050043784D /* ViewController.swift in Sources */,
 				840FC60123A60AB60043784D /* APIService.swift in Sources */,
 				840FC60523A65DAC0043784D /* Article.swift in Sources */,
+				8445C4E523A80DA200CD6EF9 /* UserDAO.swift in Sources */,
+				8445C4DC23A7F50B00CD6EF9 /* HeadLineListTableViewCell.swift in Sources */,
 				840FC5F923A5FF1D0043784D /* ConstantManager.swift in Sources */,
 				840FC5CC23A5E2050043784D /* AppDelegate.swift in Sources */,
 				840FC60723A66C8D0043784D /* NewsListViewController.swift in Sources */,
+				8445C4D623A7D90E00CD6EF9 /* NewsDetailViewController.swift in Sources */,
 				840FC5FD23A6044F0043784D /* News.swift in Sources */,
 				840FC5CE23A5E2050043784D /* SceneDelegate.swift in Sources */,
+				8445C4D423A7D7D500CD6EF9 /* UIImageExtention.swift in Sources */,
+				840FC60923A6710E0043784D /* NewsListTableViewCell.swift in Sources */,
+				8445C4E923A8123300CD6EF9 /* WelcomeViewController.swift in Sources */,
+				8445C4DE23A7FC9D00CD6EF9 /* CustomeHeadLineViewController.swift in Sources */,
+				8445C4E223A8004500CD6EF9 /* NewsManager.swift in Sources */,
 				840FC5FF23A60A890043784D /* APIConfigurationManager.swift in Sources */,
+				8445C4D823A7F10600CD6EF9 /* TabViewController.swift in Sources */,
+				8445C4E023A7FF5700CD6EF9 /* DateUtil.swift in Sources */,
+				8445C4E723A80EF300CD6EF9 /* ProfileViewController.swift in Sources */,
 				840FC60323A615680043784D /* NewsServiceClient.swift in Sources */,
+				8445C4DA23A7F23800CD6EF9 /* ShowHeadLineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

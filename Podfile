@@ -7,6 +7,7 @@ target 'SwivelGroupTestProject' do
 
   # Pods for SwivelGroupTestProject
 pod 'Alamofire', '= 5.0.0-beta.5'
+pod 'RealmSwift'
 
   target 'SwivelGroupTestProjectTests' do
     inherit! :search_paths

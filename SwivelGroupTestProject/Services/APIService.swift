@@ -11,10 +11,13 @@ import Alamofire
 
 enum APIConfig: APIConfiguration {
     case showNewsList(parameters: Parameters)
+    case showHeadLines(parameters: Parameters)
 
     var method: HTTPMethod {
         switch self {
         case .showNewsList:
+            return .get
+        case .showHeadLines:
             return .get
         }
     }
@@ -23,6 +26,8 @@ enum APIConfig: APIConfiguration {
         switch self {
         case .showNewsList:
             return "v2/everything"
+        case .showHeadLines:
+            return "v2/top-headlines"
         }
     }
 
@@ -36,6 +41,10 @@ enum APIConfig: APIConfiguration {
         case .showNewsList(let parameters):
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
             //print(":::: url \(urlRequest)")
+            return urlRequest
+        case .showHeadLines(let parameters):
+            urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
+            print(":::: url \(urlRequest)")
             return urlRequest
         }
     }
