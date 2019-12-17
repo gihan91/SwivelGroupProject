@@ -73,7 +73,9 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var selectedValue = self.listArray![indexPath.row]
-        print(selectedValue.title)
+        guard selectedValue.urlToImage != nil, selectedValue.url != nil, selectedValue.description != nil, selectedValue.title != nil else {
+            return
+        }
         goToNextViewController(imageUrl: selectedValue.urlToImage!, contentUrl: selectedValue.url!, content: selectedValue.description!, title: selectedValue.title!)
     }
 }

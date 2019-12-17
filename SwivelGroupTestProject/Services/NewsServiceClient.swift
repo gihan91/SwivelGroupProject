@@ -12,7 +12,7 @@ import Alamofire
 class NewsServiceClient {
 
     static func getNewsList (completion:@escaping (Result<Article, Error>)->Void) {
-        AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "2019-12-17)","sortBy": "publishedAt", "apiKey" : "\(NewsManager.shared.requestApiKey())"])).responseDecodable { (response: DataResponse<Article>) in
+        AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "2019-12-18)","sortBy": "publishedAt", "apiKey" : "\(NewsManager.shared.requestApiKey())"])).responseDecodable { (response: DataResponse<Article>) in
             switch response.result {
             case .success:
                 completion(response.result)
@@ -23,7 +23,7 @@ class NewsServiceClient {
     }
 
     static func getHeadLineList (completion:@escaping (Result<Article, Error>)->Void) {
-        AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "\(DateUtil.getCurrentDate())","sortBy": "publishedAt", "apiKey" : "\(NewsManager.shared.requestApiKey())"])).responseDecodable { (response: DataResponse<Article>) in
+        AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "2019-12-18)","sortBy": "publishedAt", "apiKey" : "\(NewsManager.shared.requestApiKey())"])).responseDecodable { (response: DataResponse<Article>) in
             switch response.result {
             case .success:
                 completion(response.result)
@@ -33,8 +33,8 @@ class NewsServiceClient {
         }
     }
 
-    static func getNewsByKeyword (completion:@escaping (Result<Article, Error>)->Void) {
-           AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "\(DateUtil.getCurrentDate())","sortBy": "publishedAt", "apiKey" : "\(NewsManager.shared.requestApiKey())"])).responseDecodable { (response: DataResponse<Article>) in
+    static func getNewsByKeyword (q: String, completion:@escaping (Result<Article, Error>)->Void) {
+           AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "2019-12-18)","sortBy": "publishedAt", "apiKey" : "\(NewsManager.shared.requestApiKey())"])).responseDecodable { (response: DataResponse<Article>) in
                switch response.result {
                case .success:
                    completion(response.result)

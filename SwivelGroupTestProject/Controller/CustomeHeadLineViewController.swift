@@ -22,9 +22,9 @@ class CustomeHeadLineViewController: UIViewController {
                 "animal"
                 ]
 
-//    var selectedKeyword: String?
-    var selectedDelegation: SelectedKeyword?
+    var selectedKeyword: String?
 
+    var delegate: SelectedKeyword? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +62,7 @@ class CustomeHeadLineViewController: UIViewController {
     }
 
 
-    @objc func dismissKeyboard() {
+    @objc override func dismissKeyboard() {
         view.endEditing(true)
     }
 
@@ -91,8 +91,10 @@ extension CustomeHeadLineViewController: UIPickerViewDelegate, UIPickerViewDataS
         guard let selectedKeyword: String = keywords[row] else {
             return
         }
-        selectedDelegation?.getSelectedKeyword(keyword: selectedKeyword)
-        txtKeywordSelection.text = selectedKeyword
+            txtKeywordSelection.text = selectedKeyword
+        delegate?.getSelectedKeyword(keyword: selectedKeyword)
+        print(":::: seeelc \(selectedKeyword)")
+
     }
 
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
