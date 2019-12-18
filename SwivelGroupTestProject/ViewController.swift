@@ -13,18 +13,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NewsServiceClient.getNewsList { (result) in
-            switch result {
-
-            case .success(let news):
-                var list = news.articles
-                for alldata in list! {
-                    print(alldata.title)
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
 
 

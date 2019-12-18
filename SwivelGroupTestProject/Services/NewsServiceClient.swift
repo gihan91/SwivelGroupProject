@@ -10,14 +10,9 @@ import Foundation
 import Alamofire
 
 class NewsServiceClient {
-//    let params = [String: Any] = ["q": "bitcoin",
-//            "from" : "2019-11-15",
-//            "sortBy" : "publishedAt",
-//            "apiKey" : "437aa887e45f4fcca35be5efe3115a28"
-//    ]
 
     static func getNewsList (completion:@escaping (Result<Article, Error>)->Void) {
-        AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "2019-11-15","sortBy": "publishedAt", "apiKey" : "437aa887e45f4fcca35be5efe3115a28"])).responseDecodable { (response: DataResponse<Article>) in
+        AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "2019-12-18)","sortBy": "publishedAt", "apiKey" : "\(NewsManager.shared.requestApiKey())"])).responseDecodable { (response: DataResponse<Article>) in
             switch response.result {
             case .success:
                 completion(response.result)
@@ -26,4 +21,26 @@ class NewsServiceClient {
             }
         }
     }
+
+    static func getHeadLineList (completion:@escaping (Result<Article, Error>)->Void) {
+        AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "2019-12-18)","sortBy": "publishedAt", "apiKey" : "\(NewsManager.shared.requestApiKey())"])).responseDecodable { (response: DataResponse<Article>) in
+            switch response.result {
+            case .success:
+                completion(response.result)
+            case .failure(let err):
+                print(err)
+            }
+        }
+    }
+
+    static func getNewsByKeyword (q: String, completion:@escaping (Result<Article, Error>)->Void) {
+           AF.request(APIConfig.showNewsList(parameters: ["q":"bitcoin","from": "2019-12-18)","sortBy": "publishedAt", "apiKey" : "\(NewsManager.shared.requestApiKey())"])).responseDecodable { (response: DataResponse<Article>) in
+               switch response.result {
+               case .success:
+                   completion(response.result)
+               case .failure(let err):
+                   print(err)
+               }
+           }
+       }
 }
