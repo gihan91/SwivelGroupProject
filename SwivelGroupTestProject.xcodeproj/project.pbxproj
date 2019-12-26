@@ -34,6 +34,7 @@
 		8445C4E523A80DA200CD6EF9 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4E423A80DA200CD6EF9 /* UserDAO.swift */; };
 		8445C4E723A80EF300CD6EF9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4E623A80EF300CD6EF9 /* ProfileViewController.swift */; };
 		8445C4E923A8123300CD6EF9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445C4E823A8123300CD6EF9 /* WelcomeViewController.swift */; };
+		847D1B9D23B4E560004F297F /* NewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D1B9C23B4E560004F297F /* NewsListViewModel.swift */; };
 		8495954323A96DD3006B6BCC /* ViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495954223A96DD2006B6BCC /* ViewControllerExtention.swift */; };
 		9C8C136422B7D311E31657FB /* Pods_SwivelGroupTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5626CFE81A3BB03F6D99F1 /* Pods_SwivelGroupTestProject.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +85,7 @@
 		8445C4E423A80DA200CD6EF9 /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 		8445C4E623A80EF300CD6EF9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8445C4E823A8123300CD6EF9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		847D1B9C23B4E560004F297F /* NewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewModel.swift; sourceTree = "<group>"; };
 		8495954223A96DD2006B6BCC /* ViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtention.swift; sourceTree = "<group>"; };
 		89D56F36DE0EE669C30667A0 /* Pods-SwivelGroupTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProject.release.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		D30A37656B3F39EAB8B3CECF /* Pods_SwivelGroupTestProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwivelGroupTestProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 		840FC5CA23A5E2050043784D /* SwivelGroupTestProject */ = {
 			isa = PBXGroup;
 			children = (
+				847D1B9B23B4E53A004F297F /* ViewModel */,
 				840FC5F423A5FC830043784D /* Environments */,
 				840FC5F323A5FBE20043784D /* Extentions */,
 				840FC5F223A5FBAC0043784D /* Utils */,
@@ -258,6 +261,14 @@
 				8445C4E423A80DA200CD6EF9 /* UserDAO.swift */,
 			);
 			path = DAO;
+			sourceTree = "<group>";
+		};
+		847D1B9B23B4E53A004F297F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				847D1B9C23B4E560004F297F /* NewsListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C15BEE84D5AFC581D355B651 /* Frameworks */ = {
@@ -460,6 +471,7 @@
 				840FC60323A615680043784D /* NewsServiceClient.swift in Sources */,
 				8445C4DA23A7F23800CD6EF9 /* ShowHeadLineViewController.swift in Sources */,
 				8495954323A96DD3006B6BCC /* ViewControllerExtention.swift in Sources */,
+				847D1B9D23B4E560004F297F /* NewsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

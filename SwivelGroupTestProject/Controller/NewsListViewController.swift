@@ -11,35 +11,20 @@ import UIKit
 class NewsListViewController: UIViewController {
 
     @IBOutlet var tblNewsList: UITableView!
-    var listArray: Array<News>?
 
+    var newsListViewModel = NewsListViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNewsList()
         self.tblNewsList.delegate = self
         self.tblNewsList.dataSource = self
         tblNewsList.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
-
-        // Do any additional setup after loading the view.
+        newsListViewModel.getNewsList {
+            self.tblNewsList.reloadData()
+        }
     }
-
     override func viewWillAppear(_ animated: Bool) {
         self.tblNewsList.reloadData()
-    }
-
-    func getNewsList() {
-        NewsServiceClient.getNewsList { (result) in
-            switch result {
-            case .success(let news):
-                self.listArray = news.articles
-                if self.listArray?.count ?? 0 > 0 {
-                    self.tblNewsList.reloadData()
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
 
     func goToNextViewController(imageUrl: URL, contentUrl: String, content: String, title: String) {
@@ -55,28 +40,28 @@ class NewsListViewController: UIViewController {
 
 extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listArray?.count ?? 0
+        return self.newsListViewModel.getNumberOfRowForSection(section: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsListTableViewCell
-        cell.setData(news: (self.listArray?[indexPath.row])!)
-       let imageUrl = self.listArray?[indexPath.row].urlToImage
+        cell.lblTitle.text = newsListViewModel.getTitle(indexPath: indexPath)
+        let imageUrl = newsListViewModel.getImageUrl(indexPath: indexPath)
         if imageUrl != nil {
             DispatchQueue.main.async {
-                cell.imgNews.load(url: imageUrl!)
+                cell.imgNews.load(url: imageUrl)
             }
         }
 
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var selectedValue = self.listArray![indexPath.row]
-        guard selectedValue.urlToImage != nil, selectedValue.url != nil, selectedValue.description != nil, selectedValue.title != nil else {
-            return
-        }
-        goToNextViewController(imageUrl: selectedValue.urlToImage!, contentUrl: selectedValue.url!, content: selectedValue.description!, title: selectedValue.title!)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        var selectedValue = self.newsListViewModel.listArray?[indexPath.row]
+//        guard selectedValue?.urlToImage != nil, selectedValue?.url != nil, selectedValue?.description != nil, selectedValue?.title != nil else {
+//            return
+//        }
+//        goToNextViewController(imageUrl: selectedValue?.urlToImage! ?? <#default value#>, contentUrl: selectedValue?.url! ?? <#default value#>, content: selectedValue?.description! ?? <#default value#>, title: selectedValue?.title! ?? <#default value#>)
+//    }
 }
 
