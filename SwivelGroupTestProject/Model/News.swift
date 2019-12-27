@@ -10,11 +10,11 @@ import Foundation
 
 struct News: Codable {
      var title: String?
-     var urlToImage: URL?
+     var urlToImage: String?
      var description: String?
      var url: String?
 
-    init(title: String, urlToImage: URL) {
+    init(title: String, urlToImage: String) {
         self.title = title
         self.urlToImage = urlToImage
     }

@@ -11,14 +11,17 @@ import RealmSwift
 
 class WelcomeViewController: UIViewController {
 
+    // MARK: UI Reference
     @IBOutlet var lblShowName: UILabel!
 
+    // MARK: Class Variables
     var realm: Realm = try! Realm()
 
+    // MARK: Main Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-
+        
     }
 
     func getData() {

@@ -9,18 +9,17 @@
 import Foundation
 
 class NewsListViewModel {
-    
+
+    // MARK: Class Variables
     var listArray: Array<News>?
 
-    func getNewsList(completion: @escaping () -> Void) {
+    // MARK: Main Functions
+    func getNewsList(completion: @escaping (Bool) -> Void) {
         NewsServiceClient.getNewsList { (result) in
             switch result {
             case .success(let news):
                 self.listArray = news.articles
-                if self.listArray?.count ?? 0 > 0 {
-
-                }
-                completion()
+                completion(true)
             case .failure(let error):
                 print(error)
             }
@@ -28,7 +27,9 @@ class NewsListViewModel {
     }
 }
 
+// MARK: Extensions
 extension NewsListViewModel {
+
     func getNumberOfSection() -> Int {
         return 1
     }
@@ -41,10 +42,19 @@ extension NewsListViewModel {
 extension NewsListViewModel {
 
     func getTitle(indexPath:IndexPath) -> String {
-           return self.listArray?[indexPath.row].title ?? ""
-       }
-
-    func getImageUrl(indexPath: IndexPath) -> URL {
-        return (self.listArray?[indexPath.row].urlToImage)!
+        return self.listArray?[indexPath.row].title ?? ""
     }
+
+    func getImageUrl(indexPath: IndexPath) -> String {
+        return (self.listArray?[indexPath.row].urlToImage) ?? ""
+    }
+
+    func getDescription(indexPath: IndexPath) -> String {
+        return (self.listArray?[indexPath.row].description) ?? ""
+    }
+
+    func getUrl(indexPath: IndexPath) -> String {
+        return (self.listArray?[indexPath.row].url) ?? ""
+    }
+    
 }

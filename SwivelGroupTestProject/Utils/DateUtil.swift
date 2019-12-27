@@ -14,7 +14,6 @@ class DateUtil {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let result = formatter.string(from: date)
-        print(":::: Date is \(result)")
         return result
     }
 }

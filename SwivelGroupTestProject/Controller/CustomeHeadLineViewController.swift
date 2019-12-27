@@ -8,14 +8,14 @@
 
 import UIKit
 
-protocol SelectedKeyword {
-    func getSelectedKeyword(keyword: String?)
-}
-
 class CustomeHeadLineViewController: UIViewController {
 
+    // MARK: UI Reference
+    @IBOutlet var tblCustomeHeader: UITableView!
     @IBOutlet var txtKeywordSelection: UITextField!
 
+    // MARK: Class Variables
+    var customeHeadLineViewModel = CustomeNewsViewModel()
     let keywords = ["bitcoin",
                 "apple",
                 "earthquake",
@@ -24,14 +24,17 @@ class CustomeHeadLineViewController: UIViewController {
 
     var selectedKeyword: String?
 
-    var delegate: SelectedKeyword? = nil
-
+    // MARK: Main Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         createDayPicker()
         createToolbar()
+        self.tblCustomeHeader.delegate = self
+        self.tblCustomeHeader.dataSource = self
+
     }
 
+     // MARK: Util functions
     func createDayPicker() {
 
         let dayPicker = UIPickerView()
@@ -67,7 +70,7 @@ class CustomeHeadLineViewController: UIViewController {
     }
 
 }
-
+// MARK: Extensions
 extension CustomeHeadLineViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -92,8 +95,9 @@ extension CustomeHeadLineViewController: UIPickerViewDelegate, UIPickerViewDataS
             return
         }
             txtKeywordSelection.text = selectedKeyword
-        delegate?.getSelectedKeyword(keyword: selectedKeyword)
-        print(":::: seeelc \(selectedKeyword)")
+        customeHeadLineViewModel.getCustomeHeadLines(selectedKeyword: selectedKeyword ) { (success) in
+            self.tblCustomeHeader.reloadData()
+        }
 
     }
 
@@ -115,5 +119,24 @@ extension CustomeHeadLineViewController: UIPickerViewDelegate, UIPickerViewDataS
 
         return label
     }
+}
+
+extension CustomeHeadLineViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return customeHeadLineViewModel.getNumberOfRowForSection(section: section)
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "customeHeaderCell", for: indexPath) as! CustomeHeaderTableViewCell
+        let imageUrl = customeHeadLineViewModel.getImageUrl(indexPath: indexPath)
+        cell.imgCustomeHeaderImage.sd_setImage(with: URL(string: imageUrl)) { (image, err, tyoe, url) in
+            cell.imgCustomeHeaderImage.image = image
+        }
+        cell.lblCustomeHeaderTitle.text = customeHeadLineViewModel.getDescription(indexPath: indexPath)
+        return cell
+    }
+
+
+
 }
 
