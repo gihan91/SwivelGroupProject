@@ -38,6 +38,7 @@
 		847D1B9F23B5D75D004F297F /* NewsHeadLinesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D1B9E23B5D75D004F297F /* NewsHeadLinesListViewModel.swift */; };
 		847D1BA123B5DE15004F297F /* CustomeHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D1BA023B5DE15004F297F /* CustomeHeaderTableViewCell.swift */; };
 		847D1BA323B5DF09004F297F /* CustomeNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D1BA223B5DF09004F297F /* CustomeNewsViewModel.swift */; };
+		847D1BA823B5EF2E004F297F /* TestNewsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D1BA723B5EF2E004F297F /* TestNewsListViewModel.swift */; };
 		8495954323A96DD3006B6BCC /* ViewControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495954223A96DD2006B6BCC /* ViewControllerExtention.swift */; };
 		9C8C136422B7D311E31657FB /* Pods_SwivelGroupTestProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5626CFE81A3BB03F6D99F1 /* Pods_SwivelGroupTestProject.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +93,7 @@
 		847D1B9E23B5D75D004F297F /* NewsHeadLinesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeadLinesListViewModel.swift; sourceTree = "<group>"; };
 		847D1BA023B5DE15004F297F /* CustomeHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		847D1BA223B5DF09004F297F /* CustomeNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeNewsViewModel.swift; sourceTree = "<group>"; };
+		847D1BA723B5EF2E004F297F /* TestNewsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNewsListViewModel.swift; sourceTree = "<group>"; };
 		8495954223A96DD2006B6BCC /* ViewControllerExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtention.swift; sourceTree = "<group>"; };
 		89D56F36DE0EE669C30667A0 /* Pods-SwivelGroupTestProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwivelGroupTestProject.release.xcconfig"; path = "Target Support Files/Pods-SwivelGroupTestProject/Pods-SwivelGroupTestProject.release.xcconfig"; sourceTree = "<group>"; };
 		D30A37656B3F39EAB8B3CECF /* Pods_SwivelGroupTestProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwivelGroupTestProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 		840FC5E123A5E2070043784D /* SwivelGroupTestProjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				847D1BA623B5EF09004F297F /* TestViewModels */,
 				840FC5E223A5E2070043784D /* SwivelGroupTestProjectTests.swift */,
 				840FC5E423A5E2070043784D /* Info.plist */,
 			);
@@ -294,6 +297,14 @@
 				840FC5CB23A5E2050043784D /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		847D1BA623B5EF09004F297F /* TestViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				847D1BA723B5EF2E004F297F /* TestNewsListViewModel.swift */,
+			);
+			path = TestViewModels;
 			sourceTree = "<group>";
 		};
 		C15BEE84D5AFC581D355B651 /* Frameworks */ = {
@@ -508,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				840FC5E323A5E2070043784D /* SwivelGroupTestProjectTests.swift in Sources */,
+				847D1BA823B5EF2E004F297F /* TestNewsListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,7 +712,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CF4Q2LXK5N;
+				DEVELOPMENT_TEAM = XCPM2R6PDV;
 				INFOPLIST_FILE = SwivelGroupTestProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -723,7 +735,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CF4Q2LXK5N;
+				DEVELOPMENT_TEAM = XCPM2R6PDV;
 				INFOPLIST_FILE = SwivelGroupTestProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

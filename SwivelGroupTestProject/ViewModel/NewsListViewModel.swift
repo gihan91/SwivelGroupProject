@@ -29,11 +29,7 @@ class NewsListViewModel {
 
 // MARK: Extensions
 extension NewsListViewModel {
-
-    func getNumberOfSection() -> Int {
-        return 1
-    }
-
+    
     func getNumberOfRowForSection(section: Int) -> Int {
         return self.listArray?.count ?? 0
     }
