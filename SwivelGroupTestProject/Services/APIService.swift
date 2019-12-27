@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 enum APIConfig: APIConfiguration {
+    
     case showNewsList(parameters: Parameters)
     case showHeadLines(parameters: Parameters)
 
@@ -44,7 +45,6 @@ enum APIConfig: APIConfiguration {
             return urlRequest
         case .showHeadLines(let parameters):
             urlRequest = try URLEncoding.default.encode(urlRequest, with: parameters)
-            print(":::: url \(urlRequest)")
             return urlRequest
         }
     }

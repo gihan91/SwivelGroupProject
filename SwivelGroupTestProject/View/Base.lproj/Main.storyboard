@@ -157,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="1439" y="-50"/>
         </scene>
-        <!--Item 2-->
+        <!--Custome HeadLines-->
         <scene sceneID="fwz-tb-J38">
             <objects>
                 <viewController id="BeH-pu-Tur" customClass="CustomeHeadLineViewController" customModule="SwivelGroupTestProject" customModuleProvider="target" sceneMemberID="viewController">
@@ -165,39 +165,85 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SuF-If-tc5">
-                                <rect key="frame" x="90" y="431" width="234" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the keyword" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aah-A4-PDP">
-                                <rect key="frame" x="0.0" y="390" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="100" width="414" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PD9-co-GhY">
+                                <rect key="frame" x="0.0" y="200" width="414" height="613"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customeHeaderCell" rowHeight="80" id="9Th-0q-E0Q" customClass="CustomeHeaderTableViewCell" customModule="SwivelGroupTestProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Th-0q-E0Q" id="AnN-qZ-0Kn">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i80-Rt-P32">
+                                                    <rect key="frame" x="15" y="8.5" width="81" height="63"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="81" id="1hZ-dc-MSw"/>
+                                                        <constraint firstAttribute="height" constant="63" id="4if-hC-JqU"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fd-Cu-mpK">
+                                                    <rect key="frame" x="104" y="29.5" width="310" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3fd-Cu-mpK" firstAttribute="leading" secondItem="i80-Rt-P32" secondAttribute="trailing" constant="8" id="PZP-3V-3mz"/>
+                                                <constraint firstAttribute="trailing" secondItem="3fd-Cu-mpK" secondAttribute="trailing" id="SEI-2V-R3X"/>
+                                                <constraint firstItem="i80-Rt-P32" firstAttribute="centerY" secondItem="AnN-qZ-0Kn" secondAttribute="centerY" id="YYV-sH-RRj"/>
+                                                <constraint firstItem="i80-Rt-P32" firstAttribute="leading" secondItem="AnN-qZ-0Kn" secondAttribute="leading" constant="15" id="amU-ME-b0c"/>
+                                                <constraint firstItem="3fd-Cu-mpK" firstAttribute="centerY" secondItem="i80-Rt-P32" secondAttribute="centerY" id="bMo-0k-0fA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgCustomeHeaderImage" destination="i80-Rt-P32" id="ZME-XF-Bo6"/>
+                                            <outlet property="lblCustomeHeaderTitle" destination="3fd-Cu-mpK" id="rAf-ro-kYs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SuF-If-tc5">
+                                <rect key="frame" x="90" y="146" width="234" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SuF-If-tc5" firstAttribute="centerY" secondItem="6oG-i0-JEy" secondAttribute="centerY" id="6rC-1L-f1W"/>
-                            <constraint firstItem="SuF-If-tc5" firstAttribute="leading" secondItem="7vx-dT-HVa" secondAttribute="leading" constant="90" id="8U3-0Q-PiX"/>
-                            <constraint firstItem="7vx-dT-HVa" firstAttribute="trailing" secondItem="Aah-A4-PDP" secondAttribute="trailing" id="Gk0-DN-fFc"/>
-                            <constraint firstItem="SuF-If-tc5" firstAttribute="centerX" secondItem="6oG-i0-JEy" secondAttribute="centerX" id="U9X-Rb-MsP"/>
-                            <constraint firstItem="Aah-A4-PDP" firstAttribute="leading" secondItem="7vx-dT-HVa" secondAttribute="leading" id="ULD-GW-uPw"/>
-                            <constraint firstItem="SuF-If-tc5" firstAttribute="top" secondItem="Aah-A4-PDP" secondAttribute="bottom" constant="20" id="pyD-k5-5cb"/>
-                            <constraint firstItem="Aah-A4-PDP" firstAttribute="centerX" secondItem="6oG-i0-JEy" secondAttribute="centerX" id="rwh-j3-WCR"/>
-                            <constraint firstItem="7vx-dT-HVa" firstAttribute="trailing" secondItem="SuF-If-tc5" secondAttribute="trailing" constant="90" id="uOb-iR-nUn"/>
+                            <constraint firstItem="PD9-co-GhY" firstAttribute="leading" secondItem="7vx-dT-HVa" secondAttribute="leading" id="1Ym-jb-Bfi"/>
+                            <constraint firstItem="PD9-co-GhY" firstAttribute="top" secondItem="SuF-If-tc5" secondAttribute="bottom" constant="20" id="61V-mV-OoH"/>
+                            <constraint firstItem="Aah-A4-PDP" firstAttribute="top" secondItem="6oG-i0-JEy" secondAttribute="top" constant="100" id="7KY-Qg-TWF"/>
+                            <constraint firstItem="PD9-co-GhY" firstAttribute="trailing" secondItem="7vx-dT-HVa" secondAttribute="trailing" id="Lfb-OL-ELW"/>
+                            <constraint firstItem="SuF-If-tc5" firstAttribute="leading" secondItem="7vx-dT-HVa" secondAttribute="leading" constant="90" id="PC5-Mc-rch"/>
+                            <constraint firstItem="Aah-A4-PDP" firstAttribute="trailing" secondItem="7vx-dT-HVa" secondAttribute="trailing" id="QXu-7Q-KdI"/>
+                            <constraint firstItem="SuF-If-tc5" firstAttribute="top" secondItem="Aah-A4-PDP" secondAttribute="bottom" constant="25" id="Qaa-gO-6fY"/>
+                            <constraint firstItem="PD9-co-GhY" firstAttribute="top" secondItem="SuF-If-tc5" secondAttribute="bottom" constant="20" id="Vce-kr-OOu"/>
+                            <constraint firstItem="SuF-If-tc5" firstAttribute="top" secondItem="Aah-A4-PDP" secondAttribute="bottom" constant="25" id="avg-Wd-om3"/>
+                            <constraint firstItem="Aah-A4-PDP" firstAttribute="leading" secondItem="7vx-dT-HVa" secondAttribute="leading" id="fbO-UU-bh7"/>
+                            <constraint firstItem="PD9-co-GhY" firstAttribute="bottom" secondItem="7vx-dT-HVa" secondAttribute="bottom" id="gdv-Pw-fpz"/>
+                            <constraint firstItem="SuF-If-tc5" firstAttribute="centerX" secondItem="6oG-i0-JEy" secondAttribute="centerX" id="svf-FA-RHE"/>
+                            <constraint firstItem="7vx-dT-HVa" firstAttribute="trailing" secondItem="SuF-If-tc5" secondAttribute="trailing" constant="90" id="wVk-P7-Hpi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7vx-dT-HVa"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="rY7-m0-SvS"/>
+                    <tabBarItem key="tabBarItem" title="Custome HeadLines" image="star.circle" catalog="system" selectedImage="star.circle.fill" id="rY7-m0-SvS"/>
                     <connections>
+                        <outlet property="tblCustomeHeader" destination="PD9-co-GhY" id="kU0-DV-SMQ"/>
                         <outlet property="txtKeywordSelection" destination="SuF-If-tc5" id="iAm-1r-CiF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgq-7M-mZt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3129" y="273"/>
+            <point key="canvasLocation" x="3128.985507246377" y="272.54464285714283"/>
         </scene>
         <!--HeadLines-->
         <scene sceneID="FaN-Tu-m5S">
@@ -312,7 +358,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jjn-1W-uUm"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="b3d-DQ-LjA"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="paperplane" catalog="system" selectedImage="paperplane.fill" id="b3d-DQ-LjA"/>
                     <connections>
                         <outlet property="lblPassword" destination="gaW-nt-4mX" id="94B-Th-mZg"/>
                         <outlet property="lblUserName" destination="R73-B5-fcN" id="D1k-N3-qXu"/>
@@ -395,5 +441,9 @@
     </scenes>
     <resources>
         <image name="globe" catalog="system" width="64" height="60"/>
+        <image name="paperplane" catalog="system" width="64" height="60"/>
+        <image name="paperplane.fill" catalog="system" width="64" height="60"/>
+        <image name="star.circle" catalog="system" width="64" height="60"/>
+        <image name="star.circle.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>

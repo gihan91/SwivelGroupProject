@@ -10,31 +10,34 @@ import UIKit
 import RealmSwift
 
 class ProfileViewController: UIViewController {
-    var realm: Realm = try! Realm()
-
+    
+    // MARK: UI Reference
     @IBOutlet var lblPassword: UITextField!
     @IBOutlet var lblUserName: UITextField!
-
+    
+    // MARK: Class Variables
+    var realm: Realm = try! Realm()
+    
+    // MARK: Main Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-
-        // Do any additional setup after loading the view.
     }
-
+    
     public func saveUser()
     {
         let userObj = User()
         userObj.userName = lblUserName.text ?? "No Name"
         userObj.password = lblPassword.text ?? "No password"
-
+        
         try! self.realm.write {
             self.realm.add(userObj)
         }
     }
-
+    
+    // MARK: Actions
     @IBAction func actionLogin(_ sender: Any) {
         saveUser()
     }
-
+    
 }

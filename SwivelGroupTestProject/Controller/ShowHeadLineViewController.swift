@@ -7,84 +7,44 @@
 //
 
 import UIKit
+import SDWebImage
 
-class ShowHeadLineViewController: UIViewController, SelectedKeyword {
-    var selec: String?
-    var cus: CustomeHeadLineViewController?
-    func getSelectedKeyword(keyword: String?) {
-        selec = keyword
-    }
+class ShowHeadLineViewController: UIViewController {
 
-
+    // MARK: UI Reference
     @IBOutlet var tblHeadLine: UITableView!
-    var listArray: Array<News>?
 
+    // MARK: Class Variables
+    var headLinesViewModel = NewsHeadLinesViewModel()
 
+    // MARK: Main Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        cus?.delegate = self
-        getCustomeHeadLines()
-        getHeadlineList()
-        print(":::: selected keyword is \(selec)")
         self.tblHeadLine.delegate = self
         self.tblHeadLine.dataSource = self
-
-        // Do any additional setup after loading the view.
+        getHeadLines()
     }
-
-    func getHeadlineList() {
-        NewsServiceClient.getHeadLineList { (result) in
-            switch result {
-            case .success(let news):
-                self.listArray = news.articles
-                if self.listArray?.count ?? 0 > 0 {
-                    self.tblHeadLine.reloadData()
-
-                }
-            case .failure(let error):
-                print(error)
-            }
+    // MARK: Actions
+    private func getHeadLines() {
+        headLinesViewModel.getHeadlineList { (success) in
+            self.tblHeadLine.reloadData()
         }
     }
-
-    func getCustomeHeadLines() {
-        NewsServiceClient.getNewsByKeyword(q: selec ?? "") { (result) in
-            print(":::: selecuuu \(self.selec)")
-            switch result {
-            case .success(let news):
-                self.listArray = news.articles
-                if self.listArray?.count ?? 0 > 0 {
-                    self.tblHeadLine.reloadData()
-
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
-
-    override func viewWillAppear(_ animated: Bool) {
-        self.tblHeadLine.reloadData()
-        cus?.delegate = self
-        print(":::: selected keyword is \(selec)")
-
-    }
-
 }
 
+// MARK: Extensions
 extension ShowHeadLineViewController: UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.listArray?.count ?? 0
+        return headLinesViewModel.getNumberOfRowForSection(section: section)
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "headLineListCell", for: indexPath) as! HeadLineListTableViewCell
-        cell.setData(news: self.listArray![indexPath.row])
-        let imageUrl = self.listArray?[indexPath.row].urlToImage
-        if imageUrl != nil {
-            DispatchQueue.main.async {
-                cell.imgHeadLineImage.load(url: imageUrl!)
-            }
+        cell.lblHeadLineTitle.text = headLinesViewModel.getDescription(indexPath: indexPath)
+        let imageUrl = headLinesViewModel.getImageUrl(indexPath: indexPath)
+        cell.imgHeadLineImage.sd_setImage(with: URL(string: imageUrl)) { (image, err, tyoe, url) in
+            cell.imgHeadLineImage.image = image
         }
         return cell
     }

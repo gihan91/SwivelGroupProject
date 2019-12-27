@@ -1,18 +1,19 @@
 //
-//  HeadLineListTableViewCell.swift
+//  NewsListTableViewCell.swift
 //  SwivelGroupTestProject
 //
-//  Created by Gihan on 12/16/19.
+//  Created by Gihan on 12/15/19.
 //  Copyright © 2019 Gihan. All rights reserved.
 //
 
 import UIKit
 
-class HeadLineListTableViewCell: UITableViewCell {
+class NewsListTableViewCell: UITableViewCell {
 
-    @IBOutlet var lblHeadLineTitle: UILabel!
-    @IBOutlet var imgHeadLineImage: UIImageView!
-
+    // MARK: UI Reference
+    @IBOutlet var imgNews: UIImageView!
+    @IBOutlet var lblTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,9 +24,4 @@ class HeadLineListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-    func setData(news: News) {
-        self.lblHeadLineTitle.text = news.description
-    }
-
 }
