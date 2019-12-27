@@ -9,9 +9,9 @@
 + OS X v10.10 or later
 
 # Project Setup
-Configuring the Xcode project requires a few steps in Xcode to get up and running with iCloud capabilities. And also there are few configs files. if you are in develop mode you can choose develop config or you in release mode you can choose relese config file.
+Configuring the Xcode project requires a few steps in Xcode to get up and running with iCloud capabilities. And also there are few configs files. if you are in develop mode you can choose develop config or you in release mode you can choose release config file.
 
-1. Get a clone form master branch
+1. Get a clone from master branch
 
 2. Run pod install
 
